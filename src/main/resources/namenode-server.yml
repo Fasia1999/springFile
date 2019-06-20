@@ -1,0 +1,19 @@
+# Spring properties
+spring:
+  application:
+    name: namenode-service
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+
+# HTTP Server
+server:
+  port: 2222   # HTTP (Tomcat) port
+
+#variables
+file:
+  blocksize: 8196
+  replicas: 3

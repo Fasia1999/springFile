@@ -1,0 +1,19 @@
+# Spring properties
+spring:
+  application:
+    name: datanode-service
+
+management:
+  security:
+    enabled: false
+
+server:
+  port: 3333
+
+# Discovery Server Access
+eureka:
+  client:
+    registerWithEureka: true #是否将自己注册到Eureka服务中，本身就是所有无需注册
+    fetchRegistry: true #是否从Eureka中获取注册信息
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
