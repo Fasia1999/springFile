@@ -50,6 +50,7 @@ public class NameNodeController {
             log.trace("post a file to server: " + filesDto);
         }
         //TODO:save it to server
+
         filesDto.setId(3);
         return filesDto;
     }

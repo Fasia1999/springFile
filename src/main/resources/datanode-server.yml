@@ -8,7 +8,7 @@ management:
     enabled: false
 
 server:
-  port: 3333
+  port: ${PORT:0}
 
 # Discovery Server Access
 eureka:
@@ -17,3 +17,5 @@ eureka:
     fetchRegistry: true #是否从Eureka中获取注册信息
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/
+    instance:
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
